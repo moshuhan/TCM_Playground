@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="聯繫">
+  <section class="container contact-page">
+    <h1 class="wordmark">聯繫</h1>
+    <p class="lead">合作 / 接案 / 求職邀約歡迎來信</p>
+    <a class="email" href="mailto:selina91053026@gmail.com">selina91053026@gmail.com</a>
+  </section>
+</Layout>
+
+<style>
+  .contact-page {
+    padding: 56px 24px 100px;
+    max-width: 560px;
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .lead {
+    font-size: 14px;
+    color: var(--color-muted);
+    margin-bottom: 20px;
+  }
+  .email {
+    font-size: 16px;
+    border-bottom: 1px solid var(--color-ink);
+    padding-bottom: 2px;
+  }
+</style>

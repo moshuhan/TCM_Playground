@@ -1,0 +1,59 @@
+/* ============================================
+   move and model — 設計變數
+   要換字體/換色只需要改這個檔案,不用動其他頁面
+   ============================================ */
+
+:root {
+  /* 色彩 — 取自 logo 圓圈內配色 */
+  --color-bg: #F5F1EA;        /* 米白底 */
+  --color-surface: #FFFFFF;   /* 卡片白 */
+  --color-border: #E4DDCF;    /* 邊線米灰 */
+  --color-ink: #3D3830;       /* 主要文字(深棕黑) */
+  --color-muted: #8A8073;     /* 次要文字/線稿灰棕 */
+  --color-footer-bg: #EDE7DA; /* 頁尾底色 */
+
+  /* 字體 — Fraunces 視覺上最接近 logo 的圓潤襯線體
+     之後想換字體:只改這兩行,並更新 index.astro 裡的 <link> 即可 */
+  --font-voice: 'Fraunces', 'Noto Serif TC', serif;
+  --font-body: 'Work Sans', 'Noto Sans TC', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wordmark {
+  font-family: var(--font-voice);
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* View Transitions 用的頁面切換動畫 */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;
+}

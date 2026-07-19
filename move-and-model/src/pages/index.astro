@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MeshMotif from '../components/MeshMotif.astro';
+import ToolCard from '../components/ToolCard.astro';
+---
+
+<Layout title="首頁">
+  <section class="hero container">
+    <div class="hero-motif"><MeshMotif width="240px" /></div>
+    <h1 class="wordmark hero-title">舞蹈的軌跡,也是知識的結構</h1>
+    <p class="hero-sub">中醫 × AI × 跨域實驗場</p>
+  </section>
+
+  <section class="container playground-preview">
+    <div class="section-label">作品 / playground</div>
+    <div class="tool-grid">
+      <ToolCard
+        title="AI 針灸學習"
+        description="經絡穴位互動練習"
+        href="/playground/acupuncture"
+      />
+      <ToolCard
+        title="國考刷題系統"
+        description="歷屆題庫間隔複習"
+        href="/playground/exam-prep"
+      />
+      <ToolCard
+        title="講義拆解工具"
+        description="上傳講義自動生成練習題"
+        href="/playground/notes-to-quiz"
+      />
+    </div>
+  </section>
+
+  <section class="container about-teaser">
+    <a href="/about" class="about-link">
+      <div class="avatar">
+        <MeshMotif width="60px" />
+      </div>
+      <div>
+        <div class="wordmark about-title">關於我</div>
+        <p class="about-desc">CS × 中醫七年制 × 舞者 × AI 教育專案</p>
+      </div>
+    </a>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 64px 24px 48px;
+  }
+  .hero-motif {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto 10px;
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: var(--color-muted);
+  }
+
+  .playground-preview {
+    padding: 24px 24px 40px;
+  }
+  .section-label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--color-muted);
+    margin-bottom: 14px;
+  }
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 640px) {
+    .tool-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .about-teaser {
+    padding: 24px 24px 60px;
+  }
+  .about-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    border: 0.5px solid var(--color-border);
+    border-radius: 14px;
+    background: var(--color-surface);
+  }
+  .avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .about-title {
+    font-size: 14px;
+  }
+  .about-desc {
+    font-size: 12px;
+    color: var(--color-muted);
+    margin-top: 2px;
+  }
+</style>

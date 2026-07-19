@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ToolCard from '../../components/ToolCard.astro';
+---
+
+<Layout title="作品">
+  <section class="container playground-page">
+    <h1 class="wordmark">Playground</h1>
+    <p class="lead">中醫學習的三個實驗性工具</p>
+    <div class="tool-grid">
+      <ToolCard
+        title="AI 針灸學習"
+        description="經絡穴位互動練習"
+        href="/playground/acupuncture"
+      />
+      <ToolCard
+        title="國考刷題系統"
+        description="歷屆題庫間隔複習"
+        href="/playground/exam-prep"
+      />
+      <ToolCard
+        title="講義拆解工具"
+        description="上傳講義自動生成練習題"
+        href="/playground/notes-to-quiz"
+      />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .playground-page {
+    padding: 56px 24px 80px;
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .lead {
+    font-size: 14px;
+    color: var(--color-muted);
+    margin-bottom: 28px;
+  }
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 640px) {
+    .tool-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

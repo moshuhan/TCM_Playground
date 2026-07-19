@@ -1,0 +1,27 @@
+---
+interface Props {
+  width?: string;
+}
+const { width = '220px' } = Astro.props;
+---
+
+<svg viewBox="0 0 300 130" style={`width:${width};display:block;`} aria-hidden="true">
+  <path
+    d="M20,70 Q60,40 90,65 Q100,50 100,30 L100,90 Q120,60 150,65 Q180,70 150,65 Q180,60 200,90 L200,30 Q200,55 210,65 Q240,40 280,70"
+    fill="none"
+    stroke="var(--color-muted)"
+    stroke-width="0.8"
+  />
+  <path
+    d="M100,30 L100,90 M120,30 L120,90 M140,30 L140,90"
+    stroke="var(--color-muted)"
+    stroke-width="0.5"
+    opacity="0.6"
+  />
+  <path
+    d="M200,30 L200,90 M180,30 L180,90 M160,30 L160,90"
+    stroke="var(--color-muted)"
+    stroke-width="0.5"
+    opacity="0.6"
+  />
+</svg>

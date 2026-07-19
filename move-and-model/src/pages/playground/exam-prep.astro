@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="即將推出">
+  <section class="container stub-page">
+    <h1 class="wordmark">即將推出</h1>
+    <p class="lead">這個工具還在打造中,先回 <a href="/playground">作品總覽</a> 逛逛。</p>
+  </section>
+</Layout>
+
+<style>
+  .stub-page {
+    padding: 80px 24px 120px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .lead {
+    font-size: 14px;
+    color: var(--color-muted);
+  }
+  .lead a {
+    text-decoration: underline;
+  }
+</style>

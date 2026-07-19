@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MeshMotif from '../components/MeshMotif.astro';
+---
+
+<Layout title="關於我">
+  <section class="container about-page">
+    <MeshMotif width="200px" />
+    <h1 class="wordmark">關於我</h1>
+    <p class="lead">
+      我是莫書涵,中國醫藥大學中醫學系七年制學生,曾就讀國立成功大學資訊工程系。
+      現於嚴宏融教授指導下,開發 AI 驅動的中醫教育聊天機器人,結合 LLM、RAG 檢索、
+      蘇格拉底式測驗與學習分析,目前服務 104 位學生。
+    </p>
+    <p class="lead">
+      舞蹈背景讓我理解「動作的結構」,資訊背景讓我理解「系統的結構」,
+      中醫則教會我「身體的結構」——move and model 是這三者交會的地方。
+    </p>
+
+    <div class="links">
+      <a href="https://github.com/moshuhan" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.threads.com/@move_model26" target="_blank" rel="noopener">Threads ↗</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about-page {
+    padding: 56px 24px 80px;
+    max-width: 640px;
+  }
+  h1 {
+    font-size: 24px;
+    margin: 20px 0 24px;
+  }
+  .lead {
+    font-size: 15px;
+    color: var(--color-ink);
+    margin-bottom: 16px;
+  }
+  .links {
+    display: flex;
+    gap: 20px;
+    margin-top: 32px;
+    font-size: 13px;
+    color: var(--color-muted);
+  }
+</style>
